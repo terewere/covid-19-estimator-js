@@ -45,7 +45,7 @@ export default class Impact {
   // not sure of this computation: the question wasn't clear
   getHospitalBedsByRequestedTime() {
     const availableBeds = 0.35 * this._input.totalHospitalBeds;
-    return Math.floor(availableBeds - this.severeCasesByRequestedTime);
+    return Math.floor(availableBeds - this.severeCasesByRequestedTime + 1);
   }
 
   // // challenge 3 of 1
