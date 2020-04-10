@@ -1,6 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import {
-  getFactor, getProjectedTime, convertElapseTimeTodays, formatMoney
+  getFactor, getProjectedTime, convertElapseTimeTodays
 // eslint-disable-next-line import/extensions
 } from './util.js';
 
@@ -63,7 +63,8 @@ export default class Impact {
     * this._input.region.avgDailyIncomePopulation
     * this._input.region.avgDailyIncomeInUSD;
 
-    return formatMoney(amount);
+    return amount;
+    // return formatMoney(amount);
   }
 
 
