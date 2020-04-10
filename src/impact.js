@@ -32,12 +32,12 @@ export default class Impact {
 
     const factor = getFactor(timeInDays);
     const projectedTime = getProjectedTime(factor);
-    return this.currentlyInfected * projectedTime;
+    return Math.trunc(this.currentlyInfected * projectedTime);
   }
 
   // challenge 2 of 1
   getSevereCasesByRequestedTime() {
-    return 0.15 * this.infectionsByRequestedTime;
+    return Math.trunc(0.15 * this.infectionsByRequestedTime);
   }
 
 
@@ -49,12 +49,12 @@ export default class Impact {
 
   // challenge 3 of 1
   getCasesForICUByRequestedTime() {
-    return 0.05 * this.infectionsByRequestedTime;
+    return Math.trunc(0.05 * this.infectionsByRequestedTime);
   }
 
   // challenge 3 of 2
   getCasesForVentilatorsByRequestedTime() {
-    return 0.02 * this.infectionsByRequestedTime;
+    return Math.trunc(0.02 * this.infectionsByRequestedTime);
   }
 
   // challenge 3 of 3
@@ -63,7 +63,7 @@ export default class Impact {
     * this._input.region.avgDailyIncomePopulation
     * this._input.region.avgDailyIncomeInUSD;
 
-    return amount;
+    return Math.trunc(amount);
     // return formatMoney(amount);
   }
 
