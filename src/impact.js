@@ -24,7 +24,7 @@ export default class Impact {
 
   // challenge 1
   getCurrentlyInfected() {
-    return this._input.reportedCases * 100;
+    return this._input.reportedCases * 10;
   }
 
   // challenge 1
