@@ -1,6 +1,5 @@
 /* eslint-disable no-underscore-dangle */
 import {
-  // eslint-disable-next-line no-unused-vars
   getFactor, getProjectedTime, convertElapseTimeTodays, formatMoney
 // eslint-disable-next-line import/extensions
 } from './util.js';
@@ -48,24 +47,24 @@ export default class Impact {
     return Math.floor(availableBeds - this.severeCasesByRequestedTime + 1);
   }
 
-  // // challenge 3 of 1
-  // getCasesForICUByRequestedTime() {
-  //   return 0.05 * this.infectionsByRequestedTime;
-  // }
+  // challenge 3 of 1
+  getCasesForICUByRequestedTime() {
+    return 0.05 * this.infectionsByRequestedTime;
+  }
 
-  // // challenge 3 of 2
-  // getCasesForVentilatorsByRequestedTime() {
-  //   return 0.02 * this.infectionsByRequestedTime;
-  // }
+  // challenge 3 of 2
+  getCasesForVentilatorsByRequestedTime() {
+    return 0.02 * this.infectionsByRequestedTime;
+  }
 
-  // // challenge 3 of 3
-  // getDollarsInFlight() {
-  //   const amount = this.infectionsByRequestedTime
-  //   * this._input.region.avgDailyIncomePopulation
-  //   * this._input.region.avgDailyIncomeInUSD;
+  // challenge 3 of 3
+  getDollarsInFlight() {
+    const amount = this.infectionsByRequestedTime
+    * this._input.region.avgDailyIncomePopulation
+    * this._input.region.avgDailyIncomeInUSD;
 
-  //   return formatMoney(amount);
-  // }
+    return formatMoney(amount);
+  }
 
 
   getData() {
@@ -73,10 +72,10 @@ export default class Impact {
       currentlyInfected: this.currentlyInfected,
       infectionsByRequestedTime: this.infectionsByRequestedTime,
       severeCasesByRequestedTime: this.severeCasesByRequestedTime,
-      hospitalBedsByRequestedTime: this.hospitalBedsByRequestedTime
-      // casesForICUByRequestedTime: this.casesForICUByRequestedTime,
-      // casesForVentilatorsByRequestedTime: this.casesForVentilatorsByRequestedTime,
-      // dollarsInFlight: this.dollarsInFlight
+      hospitalBedsByRequestedTime: this.hospitalBedsByRequestedTime,
+      casesForICUByRequestedTime: this.casesForICUByRequestedTime,
+      casesForVentilatorsByRequestedTime: this.casesForVentilatorsByRequestedTime,
+      dollarsInFlight: this.dollarsInFlight
     };
   }
 }
