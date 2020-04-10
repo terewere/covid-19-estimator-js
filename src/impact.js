@@ -15,9 +15,9 @@ export default class Impact {
     this.infectionsByRequestedTime = this.getInfectionsByRequestedTime();
     this.severeCasesByRequestedTime = this.getSevereCasesByRequestedTime();
     this.hospitalBedsByRequestedTime = this.getHospitalBedsByRequestedTime();
-    // this.casesForICUByRequestedTime = this.getCasesForICUByRequestedTime();
-    // this.casesForVentilatorsByRequestedTime = this.getCasesForVentilatorsByRequestedTime();
-    // this.dollarsInFlight = this.getDollarsInFlight();
+    this.casesForICUByRequestedTime = this.getCasesForICUByRequestedTime();
+    this.casesForVentilatorsByRequestedTime = this.getCasesForVentilatorsByRequestedTime();
+    this.dollarsInFlight = this.getDollarsInFlight();
   }
 
 
