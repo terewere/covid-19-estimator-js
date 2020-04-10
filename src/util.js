@@ -1,4 +1,4 @@
-const getFactor = ((days) => Math.floor(days / 3));
+const getFactor = ((days) => Math.trunc(days / 3));
 
 const getProjectedTime = ((factor) => 2 ** factor);
 

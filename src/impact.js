@@ -40,18 +40,11 @@ export default class Impact {
     return 0.15 * this.infectionsByRequestedTime;
   }
 
-  // challenge 2 of 2
-  // not sure of this computation: the question wasn't clear
-  // getHospitalBedsByRequestedTime() {
-  //   const availableBeds = 0.35 * this._input.totalHospitalBeds;
-  //   return Math.floor(availableBeds - this.severeCasesByRequestedTime + 1);
-  // }
 
   // challenge 2 of 2
-  // not sure of this computation: the question wasn't clear
   getHospitalBedsByRequestedTime() {
     const availableBeds = 0.35 * this._input.totalHospitalBeds;
-    return availableBeds - this.severeCasesByRequestedTime;
+    return Math.trunc(availableBeds - this.severeCasesByRequestedTime);
   }
 
   // challenge 3 of 1
