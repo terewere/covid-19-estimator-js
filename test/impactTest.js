@@ -27,3 +27,13 @@ describe('An impact', () => {
     });
   });
 });
+
+describe('An impact', () => {
+  describe('getInfectionsByRequestedTime', () => {
+    it('should return a 524288000.', () => {
+      const impact = new Impact(stubValue);
+      impact.getInfectionsByRequestedTime();
+      assert.equal(524288000, impact.getInfectionsByRequestedTime());
+    });
+  });
+});
