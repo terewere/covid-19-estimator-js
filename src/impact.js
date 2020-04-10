@@ -59,12 +59,12 @@ export default class Impact {
 
   // challenge 3 of 3
   getDollarsInFlight() {
+    const timeInDays = convertElapseTimeTodays(this._input.timeToElapse, this._input.periodType);
     const amount = this.infectionsByRequestedTime
     * this._input.region.avgDailyIncomePopulation
-    * this._input.region.avgDailyIncomeInUSD;
+    * this._input.region.avgDailyIncomeInUSD * timeInDays;
 
     return Math.trunc(amount);
-    // return formatMoney(amount);
   }
 
 
