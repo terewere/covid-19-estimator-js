@@ -8,10 +8,13 @@ import logger from './middlewares/logger';
 import xmlType from './middlewares/xml-type';
 
 const fs = require('fs');
+const cors = require('cors');
 
 const app = express();
 app.use(express.json());
 app.use(logger);
+app.use(cors());
+
 const port = process.env.port || 3000;
 app.disable('x-powered-by');
 app.set('port', port);
