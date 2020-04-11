@@ -6,7 +6,9 @@
   "private": false,
   "scripts": {
     "lint": "eslint ./src/",
-    "test": "mocha --require @babel/register './test/**/*.js'"
+    "test": "mocha --require @babel/register './test/**/*.js'",
+    "build": "bower install && grunt build",
+    "start": "nf start"
   },
   "dependencies": {
     "@babel/register": "^7.9.0",
@@ -27,5 +29,8 @@
   },
   "browserslist": [
     "last 1 Chrome versions"
-  ]
+  ],
+  "engines": {
+    "node": "12.x"
+  }
 }

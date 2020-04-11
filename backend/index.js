@@ -15,6 +15,8 @@ app.use(logger);
 const port = process.env.port || 3000;
 app.disable('x-powered-by');
 app.set('port', port);
+app.use(express.static('src'));
+
 
 // XML Builder configuration, https://github.com/Leonidas-from-XIV/node-xml2js#options-for-the-builder-class.
 const builder = new xml.Builder({
