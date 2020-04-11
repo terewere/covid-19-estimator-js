@@ -3,6 +3,7 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="Description" content="Corona virus 19 estimator">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Covid-19 Estimator</title>
 
@@ -17,24 +18,25 @@
         box-sizing: border-box;
       }
       
-      input[type=submit] {
+       button {
         width: 100%;
-        background-color: #4CAF50;
+        background-color: #0000FF;
         color: white;
         padding: 14px 20px;
         margin: 8px 0;
+        font-size: large;
         border: none;
         border-radius: 4px;
         cursor: pointer;
       }
       
-      input[type=submit]:hover {
+      ibutton:hover {
         background-color: #45a049;
       }
       
       div {
         border-radius: 5px;
-        background-color: #f2f2f2;
+        background-color: #fff;
         padding: 20px;
       }
       </style>
@@ -42,7 +44,7 @@
       
       <h2 style="text-align: center;">
        COVID-19
-      <span style="color: #45a049;">Estimator</span></h2>
+      <span style="color: #0000FF;">Estimator</span></h2>
       
       <div style="width: 40%;margin: 0 auto;">
         <form action="/action_page.php">
@@ -64,8 +66,8 @@
             </select>
             <label for="TimeToElapse">TimeToElapse</label>
             <input aria-required="true" type="number" data-time-to-elapse="timeToElapse" aria-label="timeToElapse" placeholder="Enter timeToElapse">
-        
-            <input type="submit" data-go-estimate="goEstimate" value="Estimate">
+
+            <button data-go-estimate="goEstimate">Estimate</button>
         </form>
       </div>
 
