@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(logger);
 app.use(cors());
 
-const port = process.env.port || 80;
+const port = process.env.port || 3000;
 app.disable('x-powered-by');
 app.set('port', port);
 app.use(express.static('src'));
