@@ -6,9 +6,7 @@
   "private": false,
   "scripts": {
     "lint": "eslint ./src/",
-    "test": "mocha --require @babel/register './test/**/*.js'",
-    "build": "bower install && grunt build",
-    "start": "nf start"
+    "test": "mocha --require @babel/register './test/**/*.js'"
   },
   "dependencies": {
     "@babel/register": "^7.9.0",
