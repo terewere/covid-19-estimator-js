@@ -61,6 +61,8 @@ app.post('/api/v1/on-covid-19/:type?', xmlType, xmlparser(xmlOptions), (request,
     population, totalHospitalBeds
   } = (request.body);
 
+  console.log(request.body);
+
   const input = {
     region: {
       name: 'Africa',
