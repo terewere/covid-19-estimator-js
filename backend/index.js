@@ -43,6 +43,9 @@ app.get('/api/v1/on-covid-19/logs', (request, response) => {
     });
   });
 });
+// app.get('/', (request, response) => {
+//   response.sendFile(path.join(`${__dirname}/../index.html`));
+// });
 
 app.get('/api/v1/on-covid-19/', (request, response) => {
   response.json({ data: 'welcome' });

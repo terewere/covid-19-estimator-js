@@ -5,6 +5,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "start": "node start.js",
     "lint": "eslint ./src/",
     "test": "mocha --require @babel/register './test/**/*.js'"
   },
