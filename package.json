@@ -6,7 +6,13 @@
   "private": false,
   "scripts": {
     "lint": "eslint ./src/",
-    "test": "mocha --require @babel/register './test/**/*.js'"
+    "test": "mocha --require @babel/register './test/**/*.js'",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./backend -s",
+    "build": "npm run clean && npm run build-babel",
+    "start": "npm run build && node ./build/index.js"
+
+
   },
   "dependencies": {
     "@babel/register": "^7.9.0",
