@@ -21,7 +21,7 @@ app.set('port', port);
 app.use(express.static('src'));
 
 const builder = new xml.Builder({
-  renderOpts: { pretty: false }
+  renderOpts: { pretty: true }
 });
 
 
