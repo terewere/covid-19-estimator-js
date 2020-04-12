@@ -5,12 +5,13 @@ const fs = require('fs');
 
 const logger = (req, res, next) => {
   // GET /api/v1/on-covid-19 200 30 ms
-  const { method } = req;
+  const currentDatetime = Date.now();
+  // const { method } = req;
   const { url } = req;
-  const status = res.statusCode;
+  // const status = res.statusCode;
   const start = process.hrtime();
   const durationInMilliseconds = getActualRequestDurationInMilliseconds(start);
-  const log = `${method}\t\t${url}\t\t${status}\t\t${durationInMilliseconds.toLocaleString()}\t\tms`;
+  const log = `${currentDatetime} ${url.substring(8)} done in ${durationInMilliseconds} seconds`;
   // console.log(log);
 
   fs.appendFile('request_logs.txt', `${log}\n`, (err) => {
