@@ -10,12 +10,11 @@
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./build ./backend -s",
     "build": "npm run clean && npm run build-babel",
-    "start": "npm run build && node ./build/index.js"
-
-
+    "start": "npm run build && node ./build/start.js"
   },
   "dependencies": {
     "@babel/register": "^7.9.0",
+    "babel-cli": "^6.26.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-xml-bodyparser": "^0.3.0",

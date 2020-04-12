@@ -4,4 +4,5 @@ require('@babel/register')({
 });
 
 // Import the rest of our application.
-module.exports = require('./backend/index.js');
+module.exports = require('./index.js');
+//# sourceMappingURL=start.js.map
