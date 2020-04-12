@@ -50,6 +50,9 @@ app.get('/covid', (request, response) => {
 
 app.post('/api/v1/on-covid-19/:type?', xmlType, xmlparser(xmlOptions), (request, response) => {
   const {
+    region: {
+      name, avgAge, avgDailyIncomeInUSD, avgDailyIncomePopulation
+    },
     periodType,
     timeToElapse,
     reportedCases,
@@ -58,10 +61,10 @@ app.post('/api/v1/on-covid-19/:type?', xmlType, xmlparser(xmlOptions), (request,
 
   const input = {
     region: {
-      name: 'Africa',
-      avgAge: 19.7,
-      avgDailyIncomeInUSD: 5,
-      avgDailyIncomePopulation: 0.71
+      name,
+      avgAge,
+      avgDailyIncomeInUSD,
+      avgDailyIncomePopulation
     },
     periodType,
     timeToElapse,
@@ -75,7 +78,7 @@ app.post('/api/v1/on-covid-19/:type?', xmlType, xmlparser(xmlOptions), (request,
   if (request.app.isXml) {
     return response.format({
       'application/xml': () => {
-        response.status(200).send(builder.buildObject({ estimator: output }));
+        response.status(200).send(builder.buildObject({ response: output }));
       }
     });
   }
