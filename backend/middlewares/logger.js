@@ -11,7 +11,7 @@ const logger = (req, res, next) => {
   // const status = res.statusCode;
   const start = process.hrtime();
   const durationInMilliseconds = getActualRequestDurationInMilliseconds(start);
-  const log = `${currentDatetime} ${url.substring(8)} done in ${durationInMilliseconds} seconds`;
+  const log = `${currentDatetime}\t\t${url.substring(8)}\t\tdone in ${durationInMilliseconds} seconds`;
   // console.log(log);
 
   fs.appendFile('request_logs.txt', `${log}\n`, (err) => {
